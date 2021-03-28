@@ -11,9 +11,14 @@ function playNote(event) {
     const key = document.querySelector(`[data-key="${audioKeyCode}"]`)
 
     // If key exists
+    const isKeyExists = key;
 
+    if(!isKeyExists) {
+        return;
+    }
 
     // Play audio
+    console.log('Play Audio');
 }
 
 function getKeyCode(event) {
