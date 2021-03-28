@@ -8,7 +8,7 @@ function playNote(event) {
     let audioKeyCode = getKeyCode(event);
 
     // Typed or pressed key
-    const key = document.querySelector(`[data-key="${audioKeyCode}"]`)
+    const key = document.querySelector(`.key[data-key="${audioKeyCode}"]`)
 
     // If key exists
     const isKeyExists = key;
@@ -18,7 +18,12 @@ function playNote(event) {
     }
 
     // Play audio
-    console.log('Play Audio');
+    addPlayingClass(key);
+    playAudio(audioKeyCode);
+}
+
+function addPlayingClass(key) {
+    key.classList.add('playing');
 }
 
 function getKeyCode(event) {
@@ -35,9 +40,20 @@ function getKeyCode(event) {
     return keyCode;
 }
 
+function playAudio(audioKeyCode) {
+    const audio = document.querySelector(`audio[data-key="${audioKeyCode}"]`); 
+    audio.currentTime = 0;
+    audio.play();
+}
+
+function removePlayingClass(event) {
+    event.target.classList.remove('playing');
+}
+
 // Click with mouse
 keys.forEach( (key) => {
     key.addEventListener('click', playNote);
+    key.addEventListener('transitionend', removePlayingClass)
 })
 
 // Keyboard type
