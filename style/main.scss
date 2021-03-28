@@ -145,3 +145,19 @@ body {
 .key {
     transition: transform 80ms ease;
 }
+
+// Responsividade 
+
+@media (max-width: 458px) {
+
+    #piano {
+        width: 550px;
+        transform: rotate(-90deg);
+        margin: 16px 0px;
+    }
+
+    .title {
+        display: none;
+    }
+
+}
