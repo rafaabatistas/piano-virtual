@@ -1,6 +1,6 @@
 # Piano Virtual
 
-É um site cujo o aprendizado está no uso de manipulações no DOM, colocando em prática o uso de mainuplações em JavaScript. Sendo assim criando um mini piano.  
+É um site cujo aprendizado está no uso de manipulações no DOM, colocando em prática o uso de manipulações em JavaScript. Sendo assim criando um mini piano.  
 
 ### Acesse o site [clicando aqui](https://rafaabatistas-piano-virtual.netlify.app/) 
 
